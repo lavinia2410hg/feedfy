@@ -315,8 +315,8 @@ export default function Form1() {
       <footer className="">
         <div className="w-screen h-32 curved-bottom-footer flex flex-row items-center justify-center">
           <div className="flex flex-row items-center justify-between w-64 mt-16">
+          <Image src={icon1} alt="" className="w-[70px] h-[65px]" />
             <FaPix className="w-[40px] h-[40px] text-black" />
-            <FaPix className="w-[40px] h-[40px]" />
           </div>
         </div>
       </footer>

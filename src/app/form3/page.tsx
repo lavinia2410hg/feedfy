@@ -255,59 +255,59 @@ export default function Form1() {
                 <span>Muito ruim</span>
                 <span>Muito bom</span>
               </div>
-            </div>
-            <div className="flex flex-col items-center gap-6">
-              <h3>O que você achou do preço?</h3>
+              <div className="flex flex-col items-center gap-6">
+                <h3>O que você achou do preço?</h3>
 
-              <div className="flex flex-row gap-3">
-                <div style={{
-                  background: check.q1 != undefined ? check.q1 ? "#9a03d7" : "#f7f7f7" : "",
-                  border: check.q1 != undefined ? check.q1 ? "1px solid #9ca3af" : "1px solid #e5e5e5" : "",
-                  color: check.q1 != undefined ? check.q1 ? "white" : "black" : "",
-                }}
-                  className="py-3 cursor-pointer px-7 bg-gray-200 rounded-lg border-gray-300 border-2 active:text-white delay-200 transition"
-                  onClick={() => (setCheck({ "q1": true, "q2": false, "q3": false }),
-                    setVerify((v) => { return { "q1": v.q1, "q2": v.q2, "q3": v.q3, "q4": true } })
-                  )}
-                >$</div>
-                <div style={{
-                  background: check.q2 != undefined ? check.q2 ? "#9a03d7" : "#f7f7f7" : "",
-                  border: check.q2 != undefined ? check.q2 ? "1px solid #9ca3af" : "1px solid #e5e5e5" : "",
-                  color: check.q2 != undefined ? check.q2 ? "white" : "black" : "",
-                }}
-                  className="py-3 cursor-pointer px-7 bg-gray-200 rounded-lg border-gray-300 border-2 active:text-white delay-200 transition"
-                  onClick={() => (setCheck({ "q1": false, "q2": true, "q3": false }),
-                    setVerify((v) => { return { "q1": v.q1, "q2": v.q2, "q3": v.q3, "q4": true } })
-                  )}
-                >$$</div>
-                <div style={{
-                  background: check.q3 != undefined ? check.q3 ? "#9a03d7" : "#f7f7f7" : "",
-                  border: check.q3 != undefined ? check.q3 ? "1px solid #9ca3af" : "1px solid #e5e5e5" : "",
-                  color: check.q3 != undefined ? check.q3 ? "white" : "black" : "",
-                }}
-                  className="py-3 cursor-pointer px-7 bg-gray-200 rounded-lg border-gray-300 border-2 active:text-white delay-200 transition"
-                  onClick={() => (setCheck({ "q1": false, "q2": false, "q3": true }),
-                    setVerify((v) => { return { "q1": v.q1, "q2": v.q2, "q3": v.q3, "q4": true } })
-                  )}
-                >$$$</div>
+                <div className="flex flex-row gap-3">
+                  <div style={{
+                    background: check.q1 != undefined ? check.q1 ? "#9a03d7" : "#f7f7f7" : "",
+                    border: check.q1 != undefined ? check.q1 ? "1px solid #9ca3af" : "1px solid #e5e5e5" : "",
+                    color: check.q1 != undefined ? check.q1 ? "white" : "black" : "",
+                  }}
+                    className="py-3 cursor-pointer px-7 bg-gray-200 rounded-lg border-gray-300 border-2 active:text-white delay-200 transition"
+                    onClick={() => (setCheck({ "q1": true, "q2": false, "q3": false }),
+                      setVerify((v) => { return { "q1": v.q1, "q2": v.q2, "q3": v.q3, "q4": true } })
+                    )}
+                  >$</div>
+                  <div style={{
+                    background: check.q2 != undefined ? check.q2 ? "#9a03d7" : "#f7f7f7" : "",
+                    border: check.q2 != undefined ? check.q2 ? "1px solid #9ca3af" : "1px solid #e5e5e5" : "",
+                    color: check.q2 != undefined ? check.q2 ? "white" : "black" : "",
+                  }}
+                    className="py-3 cursor-pointer px-7 bg-gray-200 rounded-lg border-gray-300 border-2 active:text-white delay-200 transition"
+                    onClick={() => (setCheck({ "q1": false, "q2": true, "q3": false }),
+                      setVerify((v) => { return { "q1": v.q1, "q2": v.q2, "q3": v.q3, "q4": true } })
+                    )}
+                  >$$</div>
+                  <div style={{
+                    background: check.q3 != undefined ? check.q3 ? "#9a03d7" : "#f7f7f7" : "",
+                    border: check.q3 != undefined ? check.q3 ? "1px solid #9ca3af" : "1px solid #e5e5e5" : "",
+                    color: check.q3 != undefined ? check.q3 ? "white" : "black" : "",
+                  }}
+                    className="py-3 cursor-pointer px-7 bg-gray-200 rounded-lg border-gray-300 border-2 active:text-white delay-200 transition"
+                    onClick={() => (setCheck({ "q1": false, "q2": false, "q3": true }),
+                      setVerify((v) => { return { "q1": v.q1, "q2": v.q2, "q3": v.q3, "q4": true } })
+                    )}
+                  >$$$</div>
+                </div>
+
+
+                <button className="h-14 bg-gray-500 rounded-md font-bold text-2xl w-full hover:bg-red2 hover:text-white transition delay-150 hover:scale-90"
+                  onClick={() => {
+                    verify.q1 && verify.q2 && verify.q3 && verify.q4 ?
+                      (setCount(count + 1), setVerify({ "q1": false, "q2": false, "q3": false, "q4": false }), router.push("form4")) : null
+
+                  }}
+                  style={{
+                    background: verify.q1 && verify.q2 && verify.q3 && verify.q4 ? "#8e07d4" : "#c981ea",
+                    color: "white",
+                    // opacity: verify.q1 && verify.q2 && verify.q3 && verify.q4 ? "0.5px" : "1px"
+                  }}
+                // disabled={verify.q1 && verify.q2 && verify.q3 ? false : true}
+                >
+                  Postar Feedback
+                </button>
               </div>
-
-
-              <button className="h-14 bg-gray-500 rounded-md font-bold text-2xl w-full hover:bg-red2 hover:text-white transition delay-150 hover:scale-90"
-                onClick={() => {
-                  verify.q1 && verify.q2 && verify.q3 && verify.q4 ?
-                    (setCount(count + 1), setVerify({ "q1": false, "q2": false, "q3": false, "q4": false }), router.push("form4")) : null
-
-                }}
-                style={{
-                  background: verify.q1 && verify.q2 && verify.q3 && verify.q4 ? "#8e07d4" : "#c981ea",
-                  color: "white",
-                  // opacity: verify.q1 && verify.q2 && verify.q3 && verify.q4 ? "0.5px" : "1px"
-                }}
-              // disabled={verify.q1 && verify.q2 && verify.q3 ? false : true}
-              >
-                Postar Feedback
-              </button>
             </div>
           </div>
 
@@ -316,8 +316,8 @@ export default function Form1() {
       <footer className="">
         <div className="w-screen h-32 curved-bottom-footer flex flex-row items-center justify-center">
           <div className="flex flex-row items-center justify-between w-64 mt-16">
+          <Image src={icon1} alt="" className="w-[70px] h-[65px]" />
             <FaPix className="w-[40px] h-[40px] text-black" />
-            <FaPix className="w-[40px] h-[40px]" />
           </div>
         </div>
       </footer>

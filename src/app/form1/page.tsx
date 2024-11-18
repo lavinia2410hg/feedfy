@@ -143,7 +143,7 @@ export default function Form1() {
       </header>
 
 
-      <main className="flex flex-col items-center text-xl bg-">
+      <main className="flex flex-col items-center text-xl">
 
         <div className="absolute w-screen h-screen -z-10 overflow-hidden top-0 bg-white">
           <div className="h-full flex overflow-hidden justify-around">
@@ -202,7 +202,7 @@ export default function Form1() {
 
           <div className="flex flex-col items-center delay-150 transition"
             style={{
-              opacity: loadedImages.length === 15 ? "0": "1"
+              opacity: loadedImages.length === 15 ? "1": "0"
             }}
           >
             <h1 className="text-2xl font-bold text-purple-600">R$ 93,14</h1>
@@ -255,7 +255,6 @@ export default function Form1() {
                 <span>Muito ruim</span>
                 <span>Muito bom</span>
               </div>
-            </div>
             <div className="flex flex-col items-center gap-6">
               <h3>O que você achou do preço?</h3>
 
@@ -309,6 +308,7 @@ export default function Form1() {
                 Postar Feedback
               </button>
             </div>
+            </div>
           </div>
 
         </div>
@@ -316,7 +316,7 @@ export default function Form1() {
       <footer className="">
         <div className="w-screen h-32 curved-bottom-footer flex flex-row items-center justify-center">
           <div className="flex flex-row items-center justify-between w-64 mt-16">
-            <FaPix className="w-[40px] h-[40px] text-black" />
+          <Image src={icon1} alt="" className="w-[70px] h-[65px]" />
             <FaPix className="w-[40px] h-[40px] text-black" />
           </div>
         </div>
