@@ -160,10 +160,10 @@ export default function Form1() {
           </div>
         </div>
         <div className="flex flex-col items-center  h-full delay-200 transition"
-          style={{ height: loadedImages.length === 30 ? "100%" : "100vh" }}
+          style={{ height: loadedImages.length === 15 ? "100%" : "100vh" }}
         >
           {
-            loadedImages.length === 30 ?
+            loadedImages.length === 15 ?
               <div className="bg-white flex flex-row items-center justify-center mb-4">
                 <div className="flex flex-row gap-2 items-center justify-center">
                   <FaCheckCircle className="w-[20px] text-[#820ad1]" />
@@ -202,7 +202,7 @@ export default function Form1() {
 
           <div className="flex flex-col items-center delay-150 transition"
             style={{
-              opacity: loadedImages.length === 30 ? "1": "0"
+              opacity: loadedImages.length === 15 ? "1": "0"
             }}
           >
             <h1 className="text-2xl font-bold text-purple-600">R$ 97,47</h1>

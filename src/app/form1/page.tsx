@@ -3,10 +3,6 @@
 import Image, { StaticImageData } from "next/image";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-// import image1 from '../../public/image/primeira.jpeg';
-// import image4 from '../../public/image/quarta.jpeg';
-// import image5 from '../../public/image/quinta.webp';
-// import image2 from '../../public/image/segundo.jpeg';
 import StarRating from "@/components/StarRating";
 import { FaCheckCircle } from "react-icons/fa";
 import { FaPix } from "react-icons/fa6";
@@ -72,6 +68,8 @@ export default function Form1() {
       for (const image of listImage) {
         setLoadedImages((prev): any => [...prev, image]); // Adiciona a imagem ao estado
         await new Promise((resolve) => setTimeout(resolve, 200)); // Aguardar 1 segundo antes de carregar a próxima
+        console.log(loadImages.length);
+        
       }
     };
 
@@ -110,7 +108,7 @@ export default function Form1() {
 
   useEffect(() => {
     const targetValue = 0;
-    const duration = 2000; // Duração da animação em milissegundos
+    const duration = 2000; 
     const frameRate = 60; // Frames por segundo
     const totalFrames = Math.round((duration / 1000) * frameRate);
     const increment = targetValue / totalFrames;
@@ -160,10 +158,10 @@ export default function Form1() {
           </div>
         </div>
         <div className="flex flex-col items-center  h-full delay-200 transition"
-          style={{ height: loadedImages.length === 30 ? "100%" : "100vh" }}
+          style={{ height: loadedImages.length === 15 ? "100%" : "100vh" }}
         >
           {
-            loadedImages.length === 30 ?
+            loadedImages.length === 15 ?
               <div className="bg-white flex flex-row items-center justify-center mb-4">
                 <div className="flex flex-row gap-2 items-center justify-center">
                   <FaCheckCircle className="w-[20px] text-[#820ad1]" />
@@ -182,18 +180,20 @@ export default function Form1() {
           <div className="w-full h-56 flex flex-col items-center ">
             {
               loadedImages.map((src, index) => {
+                console.log(loadedImages.length);
+                
                 if (loadedImages.length <= 15) {
                   return <Image
                     src={src}
                     alt={`Imagem ${index}`}
-                    key={src}
+                    key={`Imagem ${index}`}
                     className="absolute h-[197px] w-[300px] border border-purple-600 rounded-xl m-0.5"
                   />
                 }
                 return <Image
                   src={image6}
                   alt={`Imagem ${index}`}
-                  key={src}
+                  key={`Imagem ${index}`}
                   className="absolute h-[197px] w-[300px] border border-purple-600 rounded-xl m-0.5"
                 />
               })
@@ -202,7 +202,7 @@ export default function Form1() {
 
           <div className="flex flex-col items-center delay-150 transition"
             style={{
-              opacity: loadedImages.length === 30 ? "1": "0"
+              opacity: loadedImages.length === 15 ? "1": "0"
             }}
           >
             <h1 className="text-2xl font-bold text-purple-600">R$ 93,14</h1>
