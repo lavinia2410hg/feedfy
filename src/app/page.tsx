@@ -40,7 +40,7 @@ export default function Home() {
               placeholder="Digite seu e-mail"
               type="email"
               name="email"
-              className="w-full h-12 rounded-md border-2 border-black pl-4 text-xl"
+              className="w-full h-12 rounded-md border-2 border-black pl-4 text-xl text-black"
               value={email} // Valor do input é controlado pelo estado
               onChange={(e) => setEmail(e.target.value)} // Atualiza o estado ao digitar
             />

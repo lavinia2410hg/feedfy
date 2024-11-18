@@ -157,7 +157,7 @@ export default function Form1() {
               placeholder={boolean ? "Digite seu CPF" : "Digite seu Celular"}
               value={inputValue}
               onChange={(e) => handleInputChange(e.target.value)}
-              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+              className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-black"
             />
             {errorMessage && <p className="text-red-600 text-sm mt-2">{errorMessage}</p>}
             <button
