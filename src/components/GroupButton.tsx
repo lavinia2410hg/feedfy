@@ -1,6 +1,7 @@
 "use client"
 
-import { IQ } from '@/app/page';
+
+import { IQ } from '@/app/page copy';
 import React, { Dispatch, SetStateAction, useState } from 'react';
 
 interface ButtonGroupProps {
