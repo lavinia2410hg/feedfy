@@ -128,8 +128,8 @@ export default function Form1() {
   }, []);
   
   return (
-  <>
-      <div className="absolute w-screen h-[130vh] top-0 left-0 -z-10 overflow-hidden">
+    <div className="flex flex-col gap-5 h-screen text-black">
+      <div className="absolute w-screen h-[140vh] top-0 left-0 -z-10 overflow-hidden">
         <div className="h-full w-full flex overflow-hidden justify-around">
           <div className="h-[1em] w-[2em] animate-spin-slow1 self-end bg-purple-100"></div>
           <div className="h-[1.5em] w-[2em] animate-spin-slow2 self-end bg-purple-100"></div>
@@ -141,8 +141,6 @@ export default function Form1() {
           <div className="h-[1em] w-[2em] animate-spin-slow8 self-end bg-purple-100"></div>
         </div>
       </div>
-    <div className="flex flex-col gap-5 h-full text-black">
-
       <header>
         <div className="w-screen curved-top h-24 bg-purple-600 flex flex-row justify-center">
           <div className="flex flex-row justify-around w-[1000px] mt-6 ">
@@ -157,13 +155,13 @@ export default function Form1() {
         </div>
       </header>
 
-      <main className="flex flex-col items-center text-xl ">
 
+      <main className="flex flex-col items-center text-xl ">
         <div className="flex flex-col items-center  h-full delay-200 transition"
-          style={{ height: loadedImages.length !== 15 ? "100%" : "100vh" }}
+          style={{ height: loadedImages.length === 15 ? "100%" : "100vh" }}
         >
           {
-            loadedImages.length !== 15 ?
+            loadedImages.length === 15 ?
               <div className="bg-white flex flex-row items-center justify-center mb-4">
                 <div className="flex flex-row gap-2 items-center justify-center">
                   <FaCheckCircle className="w-[20px] text-[#820ad1]" />
@@ -202,7 +200,7 @@ export default function Form1() {
 
           <div className="flex flex-col items-center delay-150 transition"
             style={{
-              opacity: loadedImages.length === 15 ? "1": "1"
+              opacity: loadedImages.length === 15 ? "1": "0"
             }}
           >
             <h1 className="text-2xl font-bold text-purple-600">R$ 47,13</h1>
@@ -255,7 +253,7 @@ export default function Form1() {
                 <span>Muito ruim</span>
                 <span>Muito bom</span>
               </div>
-              <div className="flex flex-col items-center gap-6 bg-transparent">
+              <div className="flex flex-col items-center gap-6">
                 <h3>O que você achou do preço?</h3>
 
                 <div className="flex flex-row gap-3">
@@ -295,7 +293,7 @@ export default function Form1() {
                 <button className="h-14 bg-gray-500 rounded-md font-bold text-2xl w-full hover:bg-red2 hover:text-white transition delay-150 hover:scale-90"
                   onClick={() => {
                     verify.q1 && verify.q2 && verify.q3 && verify.q4 ?
-                      (setCount(count + 1), setVerify({ "q1": false, "q2": false, "q3": false, "q4": false }), router.push("saque")) : null
+                      (setCount(count + 1), setVerify({ "q1": false, "q2": false, "q3": false, "q4": false }), router.push("form4")) : null
 
                   }}
                   style={{
@@ -321,6 +319,6 @@ export default function Form1() {
           </div>
         </div>
       </footer>
-    </div></>
+    </div>
   );
 }

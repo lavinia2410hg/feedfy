@@ -127,7 +127,18 @@ export default function Form1() {
   
   return (
     <div className="flex flex-col gap-5 h-screen text-black">
-
+      <div className="absolute w-screen h-[140vh] top-0 left-0 -z-10 overflow-hidden">
+        <div className="h-full w-full flex overflow-hidden justify-around">
+          <div className="h-[1em] w-[2em] animate-spin-slow1 self-end bg-purple-100"></div>
+          <div className="h-[1.5em] w-[2em] animate-spin-slow2 self-end bg-purple-100"></div>
+          <div className="h-[0.5em] w-[1em] animate-spin-slow3 self-end bg-purple-100"></div>
+          <div className="h-[1em] w-[1em] animate-spin-slow4 self-end bg-purple-100"></div>
+          <div className="h-[1em] w-[2.5em] animate-spin-slow5 self-end bg-purple-100"></div>
+          <div className="h-[0.5em] w-[2em] animate-spin-slow6 self-end bg-purple-100"></div>
+          <div className="h-[2em] w-[2em] animate-spin-slow7 self-end bg-purple-100"></div>
+          <div className="h-[1em] w-[2em] animate-spin-slow8 self-end bg-purple-100"></div>
+        </div>
+      </div>
       <header>
         <div className="w-screen curved-top h-24 bg-purple-600 flex flex-row justify-center">
           <div className="flex flex-row justify-around w-[1000px] mt-6 ">
@@ -144,19 +155,6 @@ export default function Form1() {
 
 
       <main className="flex flex-col items-center text-xl">
-
-        <div className="absolute w-screen h-screen -z-10 overflow-hidden top-0 bg-white">
-          <div className="h-full flex overflow-hidden justify-around">
-            <div className="h-[1em] w-[2em] animate-spin-slow1 self-end bg-purple-100"></div>
-            <div className="h-[1.5em] w-[2em] animate-spin-slow2 self-end bg-purple-100"></div>
-            <div className="h-[0.5em] w-[1em] animate-spin-slow3 self-end bg-purple-100"></div>
-            <div className="h-[1em] w-[1em] animate-spin-slow4 self-end bg-purple-100"></div>
-            <div className="h-[1em] w-[2.5em] animate-spin-slow5 self-end bg-purple-100"></div>
-            <div className="h-[0.5em] w-[2em] animate-spin-slow6 self-end bg-purple-100"></div>
-            <div className="h-[2em] w-[2em] animate-spin-slow7 self-end bg-purple-100"></div>
-            <div className="h-[1em] w-[2em] animate-spin-slow8 self-end bg-purple-100 origin-"></div>
-          </div>
-        </div>
         <div className="flex flex-col items-center  h-full delay-200 transition"
           style={{ height: loadedImages.length === 15 ? "100%" : "100vh" }}
         >
