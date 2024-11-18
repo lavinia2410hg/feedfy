@@ -128,8 +128,8 @@ export default function Form1() {
   }, []);
   
   return (
-    <div className="flex flex-col gap-5 h-screen text-black">
-      <div className="absolute w-screen h-[140vh] top-0 left-0 -z-10 overflow-hidden">
+    <div className="flex flex-col gap-5 h-screen text-black bg-white">
+      <div className="absolute w-screen h-[150vh] top-0 left-0 -z-10 overflow-hidden">
         <div className="h-full w-full flex overflow-hidden justify-around">
           <div className="h-[1em] w-[2em] animate-spin-slow1 self-end bg-purple-100"></div>
           <div className="h-[1.5em] w-[2em] animate-spin-slow2 self-end bg-purple-100"></div>
@@ -256,7 +256,7 @@ export default function Form1() {
               <div className="flex flex-col items-center gap-6">
                 <h3>O que você achou do preço?</h3>
 
-                <div className="flex flex-row gap-3">
+                <div className="flex flex-row gap-3 bg-white">
                   <div style={{
                     background: check.q1 != undefined ? check.q1 ? "#9a03d7" : "#f7f7f7" : "",
                     border: check.q1 != undefined ? check.q1 ? "1px solid #9ca3af" : "1px solid #e5e5e5" : "",
