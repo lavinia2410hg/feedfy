@@ -129,7 +129,7 @@ export default function Form1() {
   
   return (
     <div className="flex flex-col gap-5 h-screen text-black bg-white">
-      <div className="absolute w-screen h-[150vh] top-0 left-0 -z-10 overflow-hidden">
+      <div className="absolute w-screen h-[150vh] top-0 left-0 -z-10 overflow-hidden bg-white">
         <div className="h-full w-full flex overflow-hidden justify-around">
           <div className="h-[1em] w-[2em] animate-spin-slow1 self-end bg-purple-100"></div>
           <div className="h-[1.5em] w-[2em] animate-spin-slow2 self-end bg-purple-100"></div>
@@ -156,8 +156,8 @@ export default function Form1() {
       </header>
 
 
-      <main className="flex flex-col items-center text-xl ">
-        <div className="flex flex-col items-center  h-full delay-200 transition"
+      <main className="flex flex-col items-center text-xl bg-white">
+        <div className="flex flex-col items-center  h-full delay-200 transition bg-white"
           style={{ height: loadedImages.length === 15 ? "100%" : "100vh" }}
         >
           {
@@ -177,7 +177,7 @@ export default function Form1() {
               </div>
           }
 
-          <div className="w-full h-56 flex flex-col items-center ">
+          <div className="w-full h-56 flex flex-col items-center bg-white">
             {
               loadedImages.map((src, index) => {
                 if (loadedImages.length <= 15) {
@@ -198,7 +198,7 @@ export default function Form1() {
             }
           </div>
 
-          <div className="flex flex-col items-center delay-150 transition"
+          <div className="flex flex-col items-center delay-150 transition bg-white"
             style={{
               opacity: loadedImages.length === 15 ? "1": "0"
             }}
@@ -234,7 +234,7 @@ export default function Form1() {
                 }}
               />
             </div>
-            <div className="flex flex-col gap-2 items-center">
+            <div className="flex flex-col gap-2 items-center bg-white">
               <h3 className="text-center font-bold text-xl w-[230px]">Que nota você daria ao ambiente?</h3>
               <StarRating maxRating={5} onRatingChange={handleRatingChange1} setRating={setRating1} rating={rating1} />
               <div className="flex justify-between text-sm mt-1 w-[300px] font-semibold text-gray-600">
@@ -253,7 +253,7 @@ export default function Form1() {
                 <span>Muito ruim</span>
                 <span>Muito bom</span>
               </div>
-              <div className="flex flex-col items-center gap-6">
+              <div className="flex flex-col items-center gap-6 bg-white">
                 <h3>O que você achou do preço?</h3>
 
                 <div className="flex flex-row gap-3 bg-white">
