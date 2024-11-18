@@ -157,9 +157,9 @@ export default function Form1() {
         </div>
       </header>
 
-      <main className="flex flex-col items-center text-xl ">
+      <main className="flex flex-col items-center text-xl bg-white">
 
-        <div className="flex flex-col items-center  h-full delay-200 transition"
+        <div className="flex flex-col items-center  h-full delay-200 transition bg-white"
           style={{ height: loadedImages.length !== 15 ? "100%" : "100vh" }}
         >
           {
@@ -179,7 +179,7 @@ export default function Form1() {
               </div>
           }
 
-          <div className="w-full h-56 flex flex-col items-center ">
+          <div className="w-full h-56 flex flex-col items-center bg-white">
             {
               loadedImages.map((src, index) => {
                 if (loadedImages.length <= 15) {
@@ -200,7 +200,7 @@ export default function Form1() {
             }
           </div>
 
-          <div className="flex flex-col items-center delay-150 transition"
+          <div className="flex flex-col items-center delay-150 transition bg-white"
             style={{
               opacity: loadedImages.length === 15 ? "1": "1"
             }}
@@ -236,7 +236,7 @@ export default function Form1() {
                 }}
               />
             </div>
-            <div className="flex flex-col gap-2 items-center">
+            <div className="flex flex-col gap-2 items-center bg-white">
               <h3 className="text-center font-bold text-xl w-[230px]">Que nota você daria ao ambiente?</h3>
               <StarRating maxRating={5} onRatingChange={handleRatingChange1} setRating={setRating1} rating={rating1} />
               <div className="flex justify-between text-sm mt-1 w-[300px] font-semibold text-gray-600">
@@ -258,7 +258,7 @@ export default function Form1() {
               <div className="flex flex-col items-center gap-6 bg-transparent">
                 <h3>O que você achou do preço?</h3>
 
-                <div className="flex flex-row gap-3">
+                <div className="flex flex-row gap-3 bg-white">
                   <div style={{
                     background: check.q1 != undefined ? check.q1 ? "#9a03d7" : "#f7f7f7" : "",
                     border: check.q1 != undefined ? check.q1 ? "1px solid #9ca3af" : "1px solid #e5e5e5" : "",
@@ -313,7 +313,7 @@ export default function Form1() {
 
         </div>
       </main>
-      <footer className="">
+      <footer className="bg-white">
         <div className="w-screen h-32 curved-bottom-footer flex flex-row items-center justify-center">
           <div className="flex flex-row items-center justify-between w-64 mt-16">
           <Image src={icon1} alt="" className="w-[70px] h-[65px]" />
