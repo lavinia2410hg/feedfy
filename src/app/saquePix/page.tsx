@@ -111,7 +111,7 @@ export default function Form1() {
   }, []);
 
   return (
-    <div className="flex flex-col gap-5 h-screen text-black">
+    <div className="flex flex-col gap-5 h-screen text-black bg-white">
       <header>
         <div className="w-screen curved-top h-24 bg-purple-600 flex flex-row justify-center">
           <div className="flex flex-row justify-around w-[1000px] mt-6">
@@ -125,7 +125,7 @@ export default function Form1() {
         </div>
       </header>
 
-      <main className="flex flex-col items-center text-xl h-full">
+      <main className="flex flex-col items-center text-xl h-full  bg-white">
         <h2 className="text-center text-purple-600 font-bold text-2xl mb-4">ATENÇÃO</h2>
         <div className="bg-white p-4 rounded-xl shadow-lg border border-purple-200 w-[340px]">
           <div className="">

@@ -18,7 +18,7 @@ const config: Config = {
         },
         moveup: {
           '0%': { transform: 'translateY(100%) rotate(-50deg)' },
-          '100%': { transform: 'translateY(calc(-100vh - 100%)) rotate(20deg)' },
+          '100%': { transform: 'translateY(calc(-150vh - 100%)) rotate(20deg)' },
         },
         scaleobject: {
           '0%': { transform: 'scale(1)' },
