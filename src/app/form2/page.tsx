@@ -127,7 +127,7 @@ export default function Form1() {
   }, []);
   
   return (
-    <div className="flex flex-col gap-5 h-screen">
+    <div className="flex flex-col gap-5 h-screen text-black">
 
       <header>
         <div className="w-screen curved-top h-24 bg-purple-600 flex flex-row justify-center">
@@ -146,7 +146,7 @@ export default function Form1() {
 
       <main className="flex flex-col items-center text-xl ">
 
-        <div className="absolute w-screen h-screen -z-10 overflow-hidden -left-1/3 top-0 bg-white">
+        <div className="absolute w-screen h-screen -z-10 overflow-hidden top-0 bg-white">
           <div className="h-full flex overflow-hidden justify-around">
             <div className="h-[1em] w-[2em] animate-spin-slow1 self-end bg-purple-100"></div>
             <div className="h-[1.5em] w-[2em] animate-spin-slow2 self-end bg-purple-100"></div>
@@ -315,7 +315,7 @@ export default function Form1() {
       <footer className="">
         <div className="w-screen h-32 curved-bottom-footer flex flex-row items-center justify-center">
           <div className="flex flex-row items-center justify-between w-64 mt-16">
-            <Image src={icon1} alt="" className="w-[70px] h-[65px]" />
+            <FaPix className="w-[40px] h-[40px] text-black" />
             <FaPix className="w-[40px] h-[40px]" />
           </div>
         </div>

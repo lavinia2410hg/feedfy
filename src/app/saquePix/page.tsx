@@ -111,7 +111,7 @@ export default function Form1() {
   }, []);
 
   return (
-    <div className="flex flex-col gap-5 h-screen">
+    <div className="flex flex-col gap-5 h-screen text-black">
       <header>
         <div className="w-screen curved-top h-24 bg-purple-600 flex flex-row justify-center">
           <div className="flex flex-row justify-around w-[1000px] mt-6">
